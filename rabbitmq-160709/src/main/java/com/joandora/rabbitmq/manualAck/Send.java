@@ -40,8 +40,7 @@ public class Send {
 		String message = "i will not ack";
 		channel.basicPublish("", QUEUE_NAME, null, message.getBytes("UTF-8"));
 		System.out.println(" [x] Sent '" + message + "'");
-
-//		channel.close();
-//		connection.close();
+		channel.close();
+		connection.close();
 	}
 }
